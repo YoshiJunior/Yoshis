@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:description" content="VPlaza is a game/pr_xy site full of games all kids want and need. Meet your expectations with Vplaza Games V1">
+    <link rel="stylesheet" href="main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <title>Yoshi's</title>
+</head>
+<body>
+
+    <div class="navbar">
+        <header>
+            <div class="head-left">
+                <img src="V.png" alt="logo">
+            </div>
+            <div class="head-right">
+                <p><a href="#">Home</a></p>
+                <p><a href="credits.html">Credits</a></p>
+            </div>
+            <div class="search-container">
+                <input type="text" placeholder="Search games..." class="search-bar" />
+            </div>
+        </header>
+    </div>
+
+    <div class="no-results-message" id="noResultsMessage" style="display:none;">
+        <h2>No results found...</h2>
+        <p>Try a different search term!</p>
+    </div>
+
+    <main class="games-section">
+        <section class="section">
+            
+            <h2>All Games</h2>
+            <div class="games-grid">
+                <div class="game-card" data-url="games/drive-mad.html">
+                    <img src="images/drive-mad.webp" alt="rdrive-mad">
+                    <div class="game-info">
+                        <h3>Drive Mad</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/slope.html">
+                    <img src="images/slope.jpg" alt="slope">
+                    <div class="game-info">
+                        <h3>Slope</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/subwaysurfers.html">
+                    <img src="images/subwaysurfers.webp" alt="subwaysurfers">
+                    <div class="game-info">
+                        <h3>Subway Surfers</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/basketball-stars.html">
+                    <img src="images/basketball-stars.png" alt="basket-ball-stars">
+                    <div class="game-info">
+                        <h3>Basket Ball Stars</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/cookieclicker.html">
+                    <img src="images/cookieclicker.avif" alt="cookie-clicker">
+                    <div class="game-info">
+                        <h3>Cookie Clicker</h3>
+                    </div>
+                </div>
+                <div class="game-card" data-url="games/death-run-3d">
+                    <img src="images/death-run-3d.jpg" alt="deathrun">
+                    <div class="game-info">
+                        <h3>Death Run</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.querySelectorAll('.game-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const url = card.getAttribute('data-url');
+                if (url) {
+                    window.location.href = url;
+                }
+            });
+        });
+    </script>
+    
+    
+    <script src="main.js"></script>
+</body>
+</html>
